@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+  </head>
+  <body>
+    <p> YouTube Subscribe Button</p>
+    <button
+    onclick=" 
+    subscribe();
+    " class="js-button">Subscribe</button>
+    <p> Amazon Shipping Calculator </p>
+    <input placeholder=" cost of order" class="input"> 
+    <button onclick="
+    calculate();
+    "> calculate</button>
+    <p class="dekhauvalue"></p>
+    
+
+    <script>
+      function subscribe(){
+       const buttonelement=document.querySelector('.js-button');
+      if(buttonelement.innerText==='subscribe'){
+        buttonelement.innerText='subscribed';
+      }
+      else{
+        buttonelement.innerText='subscribe';
+      }
+
+
+      }
+      function calculate(){
+        const inputvalue= document.querySelector('.input');
+        let cost= Number(inputvalue.value);
+
+        if(cost<40){
+          cost=cost+10;
+        }
+        document.querySelector('.dekhauvalue').innerHTML=`$${cost}`;
+
+
+      }
+      
+      
+    </script>
+  </body>
+</html>
